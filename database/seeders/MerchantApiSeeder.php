@@ -16,7 +16,7 @@ class MerchantApiSeeder extends Seeder
         MerchantApi::create([
             'merchant_id' => 1,
             'name' => 'Products API',
-            'base_url' => 'http://158.220.112.169/test.php',
+            'base_url' => config('merchants.techno shop.products_api', ''),
             'entity_type' => 'products',
             'contains_category_data' => true,
             'category_data_path' => 'category_id',

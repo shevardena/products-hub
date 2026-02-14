@@ -34,6 +34,7 @@ class SyncMerchantApiJob implements ShouldQueue
     {
         $this->merchantApi = $merchantApi;
         $this->mapperService = app(ApiFieldMapperService::class);
+        $this->onQueue('products-hub-import');
     }
 
     /**
